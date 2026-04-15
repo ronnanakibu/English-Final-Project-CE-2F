@@ -29,18 +29,12 @@ project-folder/
 │   ├── images/
 │   └── icons/
 │── database/ (optional)
+
 ⚙️ Installation & Usage
-
-Clone this repository:
-
-git clone https://github.com/your-username/your-repo-name.git
-
-Open the project folder:
-
-cd your-repo-name
 Run the project:
 Open index.html in your browser
 (or use Live Server for better experience)
+
 🎯 Purpose
 
 This project was created to:
