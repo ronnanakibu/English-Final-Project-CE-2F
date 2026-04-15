@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lexis — English Learning Platform</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ====== NAVBAR ====== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">Englishify<span>.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#lessons" class="nav-link">Lessons</a></li>
+        <li><a href="#quiz" class="nav-link">Quiz</a></li>
+        <li><a href="#leaderboard" class="nav-link">Leaderboard</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀️</button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ====== HERO / LANDING ====== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="grid-lines"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-tag fade-in delay-1">✦ Learn · Practice · Master</div>
+      <h1 class="hero-title fade-in delay-2">
+        Master<br/>
+        <span class="title-accent">English</span><br/>
+        with Precision.
+      </h1>
+      <p class="hero-desc fade-in delay-3">
+        A structured, interactive platform designed to sharpen your vocabulary,
+        grammar, and conversational fluency — one lesson at a time.
+      </p>
+      <div class="hero-actions fade-in delay-4">
+        <a href="#lessons" class="btn btn-primary">Start Learning →</a>
+        <a href="#quiz" class="btn btn-ghost">Take a Quiz</a>
+      </div>
+      <div class="hero-stats fade-in delay-5">
+        <div class="stat"><span class="stat-num">3</span><span class="stat-label">Lesson Tracks</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">15+</span><span class="stat-label">Examples</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">5</span><span class="stat-label">Quiz Questions</span></div>
+      </div>
+    </div>
+    <div class="hero-visual fade-in delay-3">
+      <div class="word-card wc-1">
+        <span class="wc-label">Vocabulary</span>
+        <span class="wc-word">Eloquent</span>
+        <span class="wc-def">fluent or persuasive in speaking</span>
+      </div>
+      <div class="word-card wc-2">
+        <span class="wc-label">Grammar</span>
+        <span class="wc-word">Present Perfect</span>
+        <span class="wc-def">I have studied English for years.</span>
+      </div>
+      <div class="word-card wc-3">
+        <span class="wc-label">Conversation</span>
+        <span class="wc-word">Small Talk</span>
+        <span class="wc-def">"How's your day going?"</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== LESSONS ====== -->
+  <section class="lessons" id="lessons">
+    <div class="section-inner">
+      <div class="section-header fade-up">
+        <span class="section-tag">Curriculum</span>
+        <h2 class="section-title">Core Lesson Tracks</h2>
+        <p class="section-desc">Three focused modules to build a complete foundation in English.</p>
+      </div>
+
+      <!-- Lesson 1: Vocabulary -->
+      <div class="lesson-card fade-up delay-1" data-track="vocab">
+        <div class="lesson-number">01</div>
+        <div class="lesson-icon">📖</div>
+        <h3 class="lesson-title">Vocabulary</h3>
+        <p class="lesson-desc">Expand your word bank with commonly used English words and their correct usage in context.</p>
+        <div class="lesson-examples">
+          <div class="example-item">
+            <span class="example-word">Ambiguous</span>
+            <span class="example-sentence">"The instructions were ambiguous, so I asked for clarification."</span>
+          </div>
+          <div class="example-item">
+            <span class="example-word">Eloquent</span>
+            <span class="example-sentence">"She gave an eloquent speech that moved the audience."</span>
+          </div>
+          <div class="example-item">
+            <span class="example-word">Persevere</span>
+            <span class="example-sentence">"He continued to persevere despite the difficulties."</span>
+          </div>
+        </div>
+        <button class="lesson-btn" onclick="openLessonModal('vocab')">Explore Vocab →</button>
+      </div>
+      
+        <!-- Lesson 2: Grammar -->
+        <div class="lesson-card fade-up delay-2" data-track="grammar">
+          <div class="lesson-number">02</div>
+          <div class="lesson-icon">✏️</div>
+          <h3 class="lesson-title">Grammar</h3>
+          <p class="lesson-desc">Master the structural rules of English — tenses, sentence patterns, and correct usage of parts of speech.</p>
+          <div class="lesson-examples">
+            <div class="example-item">
+              <span class="example-word">Present Perfect</span>
+              <span class="example-sentence">"I have lived here for three years."</span>
+            </div>
+            <div class="example-item">
+              <span class="example-word">Passive Voice</span>
+              <span class="example-sentence">"The book was written by a famous author."</span>
+            </div>
+            <div class="example-item">
+              <span class="example-word">Conditional</span>
+              <span class="example-sentence">"If I had studied harder, I would have passed."</span>
+            </div>
+          </div>
+          <button class="lesson-btn">Explore Grammar →</button>
+        </div>
+
+        <!-- Lesson 3: Conversation -->
+        <div class="lesson-card fade-up delay-3" data-track="conversation">
+          <div class="lesson-number">03</div>
+          <div class="lesson-icon">💬</div>
+          <h3 class="lesson-title">Conversation</h3>
+          <p class="lesson-desc">Practice real-world English through common dialogue patterns, expressions, and social phrases.</p>
+          <div class="lesson-examples">
+            <div class="example-item">
+              <span class="example-word">Greetings</span>
+              <span class="example-sentence">"It's great to finally meet you in person!"</span>
+            </div>
+            <div class="example-item">
+              <span class="example-word">Opinions</span>
+              <span class="example-sentence">"In my view, this approach is more effective."</span>
+            </div>
+            <div class="example-item">
+              <span class="example-word">Disagreement</span>
+              <span class="example-sentence">"I see your point, but I have a different perspective."</span>
+            </div>
+          </div>
+          <button class="lesson-btn">Explore Conversation →</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== QUIZ ====== -->
+  <section class="quiz-section" id="quiz">
+    <div class="section-inner">
+      <div class="section-header fade-up">
+        <span class="section-tag">Test Yourself</span>
+        <h2 class="section-title">Knowledge Quiz</h2>
+        <p class="section-desc">Answer 5 questions to test your English skills. Your score will be saved to the leaderboard.</p>
+      </div>
+
+      <div class="quiz-container fade-up">
+
+        <!-- Name Entry Screen -->
+        <div class="quiz-screen active" id="screenName">
+          <div class="name-screen">
+            <div class="name-icon">🎯</div>
+            <h3>Before you begin...</h3>
+            <p>Enter your name so we can save your score to the leaderboard.</p>
+            <div class="name-input-group">
+              <input type="text" id="nameInput" class="name-input" placeholder="Your name..." maxlength="20" />
+              <button class="btn btn-primary" id="startQuizBtn">Begin Quiz →</button>
+            </div>
+            <span class="name-error" id="nameError">Please enter your name first.</span>
+          </div>
+        </div>
+
+        <!-- Question Screen -->
+        <div class="quiz-screen" id="screenQuestion">
+          <div class="quiz-progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <div class="quiz-meta">
+            <span class="quiz-counter" id="questionCounter">Question 1 of 5</span>
+            <span class="quiz-score-live" id="liveScore">Score: 0</span>
+          </div>
+          <div class="question-block">
+            <p class="question-text" id="questionText">Loading...</p>
+          </div>
+          <div class="options-grid" id="optionsGrid">
+            <!-- Options injected by JS -->
+          </div>
+          <div class="quiz-feedback" id="quizFeedback"></div>
+        </div>
+
+        <!-- Result Screen -->
+        <div class="quiz-screen" id="screenResult">
+          <div class="result-screen">
+            <div class="result-badge" id="resultBadge">🏆</div>
+            <h3 class="result-title">Quiz Complete!</h3>
+            <p class="result-player" id="resultPlayer">Well done, —</p>
+            <div class="result-score">
+              <span id="finalScore">0</span>
+              <span class="result-of">/ 5</span>
+            </div>
+            <p class="result-msg" id="resultMsg">Keep practicing!</p>
+            <div class="result-actions">
+              <button class="btn btn-primary" id="retakeBtn">Retake Quiz</button>
+              <a href="#leaderboard" class="btn btn-ghost" id="viewLBBtn">View Leaderboard →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== LEADERBOARD ====== -->
+  <section class="leaderboard-section" id="leaderboard">
+    <div class="section-inner">
+      <div class="section-header fade-up">
+        <span class="section-tag">Rankings</span>
+        <h2 class="section-title">Leaderboard</h2>
+        <p class="section-desc">Top performers — stored locally in your browser.</p>
+      </div>
+
+      <div class="leaderboard-container fade-up">
+        <div class="lb-table-header">
+          <span>Rank</span>
+          <span>Name</span>
+          <span>Score</span>
+          <span>Date</span>
+        </div>
+        <div class="lb-table-body" id="leaderboardBody">
+          <!-- Populated by JS -->
+        </div>
+        <div class="lb-empty" id="lbEmpty">
+          <span>No scores yet. Take the quiz to be first! 🚀</span>
+        </div>
+        <div class="lb-footer">
+          <button class="btn-reset" id="resetLBBtn">🗑 Reset Leaderboard</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">Englishfy<span>.</span></span>
+      <span class="footer-copy">Built by RonnAnakIbu</span>
+    </div>
+  </footer>
+
+  <!-- Lesson Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="lessonModal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
